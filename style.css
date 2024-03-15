@@ -1,0 +1,63 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  
+  /* hesap makinesini orta hizada yapmak için*/
+  body {
+    display: flex; 
+    /* Flexbox, öğelerinizi esnek bir şekilde düzenlemenize ve sıralamanıza olanak tanır.
+    Bu özellik, özellikle farklı ekran boyutlarına sahip cihazlarda duyarlı tasarım yaparken kullanışlıdır.*/
+    align-items: center;
+    /*dikey eksende (yukarıdan aşağıya doğru veya aşağıdan yukarıya doğru) hizalamayı sağlar*/
+    justify-content: center;
+    /*yatay eksende (soldan sağa doğru veya sağdan sola doğru) hizalamayı sağlar.*/
+    height: 100vh; /* Ekran yüksekliğinin tamamını kapla */
+    margin: 0;
+    background-color: #303030 !important;
+  }
+  
+  
+  .calculator {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px;
+  }
+  
+  .calculator-screen {
+    width: 100%;
+    height: 80px;
+    border: none;
+    background-color: #252525;
+    color: #fff;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 10px;
+    font-size: 4rem;
+  }
+  
+  .calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(
+      4,
+      1fr /* 1fr, bir fraksiyon birimini temsil eder ve genellikle bir sütunun genişliğini ifade eder*/
+    ); /*bir grid konteynerinde toplam dört sütunun olacağını ve her bir sütunun genişliğinin eşit olacağını belirtir.*/
+    grid-gap: 20px; /*grid konteynerindeki sıralar ve sütunlar arasındaki boşluğu 20 piksel olarak belirtir.*/
+    padding: 20px;
+  }
+  
+  button {
+    height: 60px;
+    font-size: 2rem !important; /* burada important verdik çünkü bootstrap'te kullanmış olduğumuz btn clasındaki font-size ezmek için*/
+  }
+  
+  .equal-sign {
+    height: 98%;
+    grid-area: 2 / 4 / 6 / 5;
+    /*
+      Öğenin başladığı satır: 2
+      Öğenin başladığı sütun: 4
+      Öğenin bittiği satır: 6 (dahil değil)
+      Öğenin bittiği sütun: 5 (dahil değil)
+    */
+  }
